@@ -1,6 +1,12 @@
 import math
 
 
+# ITI1520
+# Daniel Gebara
+# 300401006
+# Exercise d1
+
+
 def tempsVoyage(distance,vitesse): 
     ''' (float,float) -> float '''
     return float(distance/vitesse*60)
@@ -17,15 +23,14 @@ def bibformat(auteur, titre, ville, maisonEdition, annee):
 
 
 def bibformatPrint():
-    ''' () -> None'''
+    ''' () -> None '''
     auteur = input("SVP entrer l'auteur: ")
     titre = input("SVP entrer le titre: ")
     ville = input("SVP entrer le ville: ")
-    maisonEdititon = input("SVP entre la maison d'edition: ")
+    maisonEdititon = input("SVP entrer la maison d'edition: ")
     annee = input(str("SVP entrer l'annee: "))
     result = bibformat (auteur, titre, ville, maisonEdititon, annee)
     return result
-    
 
 
 def logFun(x):
@@ -40,4 +45,7 @@ def anneeBis(an):
     result = result and (an%4 == 0)
     result = result and (an%100 != 0) and not (an%400 == 0)
     return result
-    #((an>1582 ) and an % 4 == 0 and an % 100 != 0 and not an % 400 == 0)
+    # return ((an>1582 ) and an % 4 == 0 and an % 100 != 0 and not an % 400 == 0)
+
+# Programme principal
+
