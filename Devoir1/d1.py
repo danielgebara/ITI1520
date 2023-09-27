@@ -21,7 +21,7 @@ def noteFinale(labos,devoirs,quiz,partiel,finale):
 
 def bibformat(auteur, titre, ville, maisonEdition, annee):
 # La bonne format dossard
-    ''' str,str,str,str,int) -> str '''
+    ''' (str,str,str,str,int) -> str '''
     return auteur + " (" + str(annee) + "). " + titre + ". " + ville +": " + maisonEdition 
 
 
@@ -51,3 +51,28 @@ def anneeBis(an):
     result = result and (an%4 == 0)
     result = result and (an%100 != 0) and not (an%400 == 0)
     return result
+
+
+#Programe Principale
+#Test 1
+print(tempsVoyage(400,100))
+print(tempsVoyage(20.6,60))
+#Test 2
+print(noteFinale(100,100,100,100,100))
+print(noteFinale(50,90.5,60,80,70))
+#Test 3
+print(bibformat("Antoine de Saint Exupery", "Le petit prince", "Paris", "Jeunesse", 1943))
+#Test 4
+bibformatPrint()
+#Test 5
+print(logFun(7))
+print(logFun(20))
+print(logFun(999999997))
+print(logFun(0.1))
+print(logFun(9997))
+#Test 6
+print(anneeBis(1904))
+print(anneeBis(1928))
+print(anneeBis(1950))
+print(anneeBis(1990))
+print(anneeBis(1932))
