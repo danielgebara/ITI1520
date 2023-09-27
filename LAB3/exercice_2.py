@@ -15,6 +15,8 @@ def dowsLake(temp):
     elif(temp<40.0):
         return 4
     
+    
+#Programme principal
 temp = float(input("Quelle est la temperature?: "))
 result = dowsLake(temp)
 if result == 1:

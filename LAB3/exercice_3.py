@@ -14,6 +14,7 @@ def estDivisible(x):
         return 0
     
 
+# Programme principal
 x = int(input("Entrer un entier positif: "))
 result = estDivisible(x)
 if result == 1:

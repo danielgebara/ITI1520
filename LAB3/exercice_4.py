@@ -14,6 +14,8 @@ def nombreRacine(a,b,c):
     else:
         return "Aucun racines reelle"
     
+
+# Programme principal
 a = float(input("Entrer valeur a: "))
 b = float(input("Entrer valeur b: "))
 c = float(input("Entrer valeur c: "))

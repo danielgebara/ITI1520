@@ -11,6 +11,8 @@ def evalueAge(age):
     else:
         return False
     
+    
+#Programme principal
 userAge= int(input("Entrer votre age: "))
 if evalueAge(userAge):
     print("Transaction acceptee")
