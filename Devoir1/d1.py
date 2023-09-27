@@ -52,6 +52,3 @@ def anneeBis(an):
     result = result and (an%100 != 0) and not (an%400 == 0)
     return result
 # return ((an>1582 ) and an % 4 == 0 and an % 100 != 0 and not an % 400 == 0)
-
-# Programme principal
-
