@@ -22,9 +22,7 @@ def noteFinale(labos,devoirs,quiz,partiel,finale):
 def bibformat(auteur, titre, ville, maisonEdition, annee):
 # La bonne format dossard
     ''' (str,str,str,str,int) -> str '''
-    anneeS = str(annee)
-    format = auteur + " (" + anneeS + "). " + titre + ". " + ville +": " + maisonEdition 
-    return format
+    return auteur + " (" + str(annee) + "). " + titre + ". " + ville +": " + maisonEdition 
 
 
 def bibformatPrint():
