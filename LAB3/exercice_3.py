@@ -4,6 +4,7 @@
 # Exercise 3
 
 
+# Programme verifie si la valeur est divisuble par 2 et 3, 2 ou 3 et retourne (int)
 def estDivisible(x):
     ''' (int) -> int '''
     if (x % 3 == 0 and x % 2 == 0 ):
@@ -15,11 +16,12 @@ def estDivisible(x):
     
 
 # Programme principal
+# L'utilisateur donne un entire positif (int)
 x = int(input("Entrer un entier positif: "))
 result = estDivisible(x)
 if result == 1:
-    print("Nombre est divisble par 2 et par 3.")
+    print("Nombre est divisble.")
 elif result == 2:
-    print("Nombre est divisble par 2 ou par 3, mais pas les deux.")
+    print("Nombre est divisble par 2 ou par 3.")
 elif result == 0:
-    print("Nombre est pas divisble ni par 2 ni par 3")
+    print("Nombre est pas divisble.")

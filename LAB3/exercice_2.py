@@ -4,8 +4,9 @@
 # Exercise 2
 
 
+# Selon la temperature retourn (int) pour determiner l'activiter 
 def dowsLake(temp):
-    '''(float) -> int'''
+    ''' (float) -> int '''
     if(temp>=80.0):
         return 1
     elif(60.0<=temp<80.0):
@@ -15,8 +16,9 @@ def dowsLake(temp):
     elif(temp<40.0):
         return 4
     
-    
-#Programme principal
+
+# Programme principal
+# Demande l'utilisateur pour la temperature (float)
 temp = float(input("Quelle est la temperature?: "))
 result = dowsLake(temp)
 if result == 1:
