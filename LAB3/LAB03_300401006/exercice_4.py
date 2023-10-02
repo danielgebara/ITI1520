@@ -14,7 +14,7 @@ def racineReelles(a,b,c):
         return "Il y a 1 racine"
     elif (discriminant < 0):
         return "Aucun racine"
-    
+
 
 #Programme principal
 # L'utilisateur entre les valeurs de a,b,c (float,float,float)
