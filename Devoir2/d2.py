@@ -4,6 +4,9 @@
 # Exercise d2
 
 
+import math
+
+
 def patinage(epaisseur,temperature):
     ''' (float,float) -> bool '''
     if (epaisseur >= 30 and temperature >= -10):
@@ -38,18 +41,18 @@ def alphaNote(note):
         return 'F'
     
 
-def alphaNoteVefif():
+def alphaNoteVerif():
     ''' () -> None '''
-# Not done
-    result = alphaNote(note)
     while True:
         valeur = float(input("SVP entrez la note finale (de 0 a 100): "))
-        if (0<= valeur <= 100):
+        if (0 <= valeur <= 100):
             break
-        else:
-            print ("SVP entrez la note finale (de 0 a 100): ")
-        print ("La note alphabetique est: ", result)
-
+    result = alphaNote(valeur)
+    print ("La note alphabetique est: ", result)
+    if result in ['E', 'F']:
+        print("Échoué")
+    else:
+        print("Réussi")
 
 def boucles(n):
     ''' (int) -> None '''
@@ -60,3 +63,86 @@ def boucles(n):
         print(i)
 
 
+def facteursDeN(n):
+    ''' (int) -> bool '''
+    facteurs = []
+    for i in range (2, n):
+        if (n % i == 0):
+            facteurs.append(i)
+    if not facteurs:
+        return False
+    somme = sum(facteurs)
+    print ("Les Facteurs de ", n, "= ", facteurs)
+    print ("Somme des Facteurs = ", somme)
+    return somme < n
+
+
+def carreParfait(x):
+    ''' (int) -> bool '''
+    racine = math.sqrt(x)
+    if (racine * racine == x):
+        print (x, "est un carre parfait et sa racine carree est", racine)
+        return True
+    else:
+        print (x, "n'est pas un carre parfait")
+        return False
+    
+
+def maFun(n):
+    ''' (int) -> float '''
+    return (-1)**n / (2*n + 1)
+
+
+def maFun_bis(n):
+    ''' (int) -> float '''
+    totale = 0
+    for i in range(0,n):
+        totale = totale + maFun(i)
+    return 4 * totale
+
+
+# Program principal
+
+# Test Q1
+print("Test Q1")
+print(patinage(30, -10))
+print(patinage(25.4, -15)) 
+print(patinage(33, -15))
+print(patinage(33, -5))
+
+# Test Q2
+print("Test Q2")
+print(f"'{alphaNote(100)}'")
+print(f"'{alphaNote(89)}'")
+print(f"'{alphaNote(56)}'")
+print(f"'{alphaNote(30)}'")
+
+# Test Q4
+print("Test Q4")
+boucles(13)
+boucles(10)
+
+# Test Q5
+print("Test Q5")
+print(facteursDeN(12)) 
+print(facteursDeN(9))
+print(facteursDeN(5)) 
+
+# Test Q6
+print("Test Q6")
+print(carreParfait(16))
+print(carreParfait(15))
+
+# Test Q7
+print("Test Q7")
+print(maFun(0)) 
+print(maFun(1))
+print(maFun(10))
+print(maFun(2))
+
+# Test Q8
+print("Test Q8")
+print(maFun_bis(10))
+print(maFun_bis(100))
+print(maFun_bis(1000))
+print(maFun_bis(10000))
