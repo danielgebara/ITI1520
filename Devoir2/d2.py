@@ -9,7 +9,7 @@ import math
 
 def patinage(epaisseur,temperature):
     ''' (float,float) -> bool '''
-    if (epaisseur >= 30 and temperature >= -10):
+    if (epaisseur >= 30 and temperature <= -10):
         return True
     else:
         return False
