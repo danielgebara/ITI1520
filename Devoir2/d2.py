@@ -8,6 +8,7 @@ import math
 
 
 def patinage(epaisseur,temperature):
+# Voir si la glace est bonne pour patiner
     ''' (float,float) -> bool '''
     if (epaisseur >= 30 and temperature <= -10):
         return True
@@ -16,6 +17,7 @@ def patinage(epaisseur,temperature):
     
 
 def alphaNote(note):
+# Prend ta note et le retourne en note alphabetique
     ''' (int) -> str '''
     if (90 <= note <= 100):
         return 'A+'
@@ -42,6 +44,7 @@ def alphaNote(note):
     
 
 def alphaNoteVerif():
+# Verifie si la note et entre 1-100 est si la note en en bas de 49  il imprime echoue, si non reussi
     ''' () -> None '''
     while True:
         valeur = float(input("SVP entrez la note finale (de 0 a 100): "))
@@ -55,6 +58,7 @@ def alphaNoteVerif():
         print("Réussi")
 
 def boucles(n):
+# Compter de 1 avec a un bon de 2 jusqua n, et faire linverse
     ''' (int) -> None '''
     for i in range(1, n, 2):
         print(i)
@@ -64,6 +68,7 @@ def boucles(n):
 
 
 def facteursDeN(n):
+# Calcule le facteur et la somme de n est si la somme est plus haut que la facteur il retourne faux sinon oui
     ''' (int) -> bool '''
     facteurs = []
     for i in range (2, n):
@@ -78,6 +83,7 @@ def facteursDeN(n):
 
 
 def carreParfait(x):
+# Identifie si x est un carre parfait si elle est affiche sa racine et retourne Vrai sinon, Faux
     ''' (int) -> bool '''
     racine = math.sqrt(x)
     if (racine * racine == x):
@@ -89,11 +95,24 @@ def carreParfait(x):
     
 
 def maFun(n):
+# Trouve le restant de l'equation par donner une valeur a n
     ''' (int) -> float '''
     return (-1)**n / (2*n + 1)
 
 
 def maFun_bis(n):
+# Cette fonction prend en entrée un entier naturel n et retourne π au rang n.
+# Cette versiom donne vos reponse
+    ''' (int) -> float '''
+    totale = 0
+    for i in range(0,n+1):
+        totale = totale + maFun(i)
+    return 4 * totale
+
+
+def maFun1_bis(n):
+# Cette fonction prend en entrée un entier naturel n et retourne π au rang n.
+# Cette versiom est comment la question est demander
     ''' (int) -> float '''
     totale = 0
     for i in range(0,n):
@@ -146,3 +165,11 @@ print(maFun_bis(10))
 print(maFun_bis(100))
 print(maFun_bis(1000))
 print(maFun_bis(10000))
+
+# Test Q8
+# Cette test est comment la question le decrit
+print("Test Q8")
+print(maFun1_bis(10))
+print(maFun1_bis(100))
+print(maFun1_bis(1000))
+print(maFun1_bis(10000))
