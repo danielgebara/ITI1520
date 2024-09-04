@@ -292,4 +292,3 @@ def joue():
 
 # programme principale
 joue()
-
